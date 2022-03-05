@@ -29,4 +29,14 @@ An interactive online web game users can explore a 2D (pixel) world and collect/
 ### Functional Pieces
 
 - User must be able to have a first weapon pick (all of them being swords/sticks)
-- User can
+- User should be able to solve puzzle maps to get to new weapon (weapons are just collectables)
+- User would have a set timer to complete the level
+
+### Styling Ideas
+
+- Use applicable CSS color backgrounds then add 2D image on top
+- On completion of level create a continue pop up and use CSS to make it have the same design as the level
+- Visuals/Transitions for when completing the level (not just a loading black screen)
+- Create weaponry menu to look at upgraded items style with CSS create a button function
+  - Can only carry Sword, Armor, Helmet in inventory.
+-
