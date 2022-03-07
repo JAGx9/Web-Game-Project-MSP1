@@ -20,7 +20,7 @@ var player;
 window.onload = function (){
     canvas = document.getElementById("game-canvas");
     ctx = canvas.getContext("2d");
-
+    canvas.style.left = '-900px'
     // Key listeners
 
 
@@ -44,7 +44,7 @@ function step(){
 function draw() {
     //Clear canvas
     ctx.fillStyle = "white";
-    ctx.fillRect(0,0,1920,1080);
+    ctx.fillRect(0,0,1080,720);
 
     //Draw Player
     player.draw();

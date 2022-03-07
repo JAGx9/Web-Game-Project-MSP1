@@ -1,3 +1,4 @@
+//Player movement 
 function Player(x,y) {
     this.x = x;
     this.y = y;
@@ -11,7 +12,7 @@ function Player(x,y) {
     
     this.step = function(){
         if(this.active) {
-            //horizontal movement
+        //horizontal movement
             if(!leftKey && !rightKey || leftKey && rightKey) {
                 this.xspeed *= this.friction;
             } else if (rightKey) {
@@ -20,13 +21,27 @@ function Player(x,y) {
                 this.xspeed --;
             }
             //vertical movement
+            if (upKey) {
 
-            //speed correction
+                this.yspeed -= 15;
+            }
+        //Fall movement (gravity)
+            this.yspeed += 5;
+           
+           
+        //speed correction (left & right)
            if (this.xspeed > this.maxSpeed) {
                this.xspeed = this.maxSpeed;
            } else if (this.xspeed < -this.maxSpeed) {
                this.xspeed = -this.maxSpeed;
            }
+        
+        //speed correction (up & down)   
+            if (this.yspeed > this.maxSpeed) {
+                this.yspeed = this.maxSpeed;
+            } else if (this.yspeed < -this.maxSpeed) {
+                this.yspeed = -this.maxSpeed;
+            }
             
             this.x += this.xspeed;
             this.y += this.yspeed;
